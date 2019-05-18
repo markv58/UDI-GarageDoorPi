@@ -1,21 +1,21 @@
 {
     "name": "Garage Door",
-    "docs": "https://github.com/markv58/GDPI",
+    "docs": "https://github.com/markv58/UDI-Garage-Door-Pi",
     "type": "python3",
     "executable": "GD-poly.py",
     "install": "install.sh",
-    "description": "Garage Door",
+    "description": "Garage Door Controller NodeServer",
     "notice": "Use at your own risk",
-    "shortPoll": "120",
+    "shortPoll": "10",
     "longPoll": "240",
     "credits": [
         {
             "title": "Garage Door NodeServer",
-            "author": "James Milne (Einstein.42)",
+            "author": "Mark Vittes (markv58)",
             "version": "1.0.0",
-            "date": "November 8, 2017",
-            "source": "https://github.com/markv58/GDPI",
-            "license": "https://github.com/markv58/GDPI/license"
+            "date": "May 18, 2019",
+            "source": "https://github.com/markv58/UDI-Garage-Door-Pi",
+            "license": "https://github.com/markv58/UDI-Garage-Door-Pi/license"
         }
     ]
 }
