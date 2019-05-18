@@ -1,0 +1,17 @@
+# controller
+ND-controller-NAME = Garage Door
+ND-controller-ICON = Output
+CMD-ctl-OPEN_DOOR-NAME = Open Door
+CMD-ctl-STOP_DOOR-NAME = Stop/Start
+CMD-ctl-CLOSE_DOOR-NAME = Close Door
+CMD-ctl-UPDATE_PROFILE-NAME = Update Profile
+CMD-ctl-REMOVE_NOTICES_ALL-NAME = Remove Notices
+ST-ctl-ST-NAME = NodeServer Online
+ST-ctl-GV1-NAME = Status
+
+STATUS-0 = Closed
+STATUS-1 = Opening
+STATUS-2 = Closing
+STATUS-3 = Open
+STATUS-4 = Stopped
+STATUS-5 = Unknown

@@ -1,0 +1,11 @@
+<editors>
+    <!-- Boolean -->
+    <editor id="bool">
+        <range uom="2" subset="0,1" />
+    </editor>
+    
+    <editor id="door_status">
+        <range uom="25" subset="0-5" nls="STATUS" />
+    </editor>
+    
+</editors>

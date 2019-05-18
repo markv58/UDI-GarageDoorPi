@@ -1,0 +1,21 @@
+{
+    "name": "Garage Door",
+    "docs": "https://github.com/markv58/GDPI",
+    "type": "python3",
+    "executable": "GD-poly.py",
+    "install": "install.sh",
+    "description": "Garage Door",
+    "notice": "Use at your own risk",
+    "shortPoll": "120",
+    "longPoll": "240",
+    "credits": [
+        {
+            "title": "Garage Door NodeServer",
+            "author": "James Milne (Einstein.42)",
+            "version": "1.0.0",
+            "date": "November 8, 2017",
+            "source": "https://github.com/markv58/GDPI",
+            "license": "https://github.com/markv58/GDPI/license"
+        }
+    ]
+}

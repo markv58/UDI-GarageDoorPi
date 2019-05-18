@@ -1,0 +1,21 @@
+<nodeDefs>
+    <!-- NODE DEF from 5.0 document http://wiki.universal-devices.com/index.php?title=V50_MAIN -->
+    <!-- controller -->
+    <nodeDef id="controller" nls="ctl">
+        <editors />
+             <sts>
+	       <st id="ST" editor="bool" />
+	       <st id="GV1" editor="door_status" />
+	     </sts>
+        <cmds>
+            <sends />
+            <accepts>
+	      <cmd id="OPEN_DOOR" />
+	      <cmd id="STOP_DOOR" />
+	      <cmd id="CLOSE_DOOR" />
+	      <cmd id="UPDATE_PROFILE" />
+              <cmd id="REMOVE_NOTICES_ALL" />
+            </accepts>
+        </cmds>
+    </nodeDef>
+</nodeDefs>
