@@ -25,6 +25,7 @@ class Controller(polyinterface.Controller):
         gpio.output(self.relay_pin, True)
         self.travel_time = 15
         self.polling = True
+        self.dualSensor = False
         self.last_state = 5
         self.pause_poll = False
         self.restart = True
