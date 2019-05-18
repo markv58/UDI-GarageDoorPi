@@ -24,7 +24,7 @@ class Controller(polyinterface.Controller):
         gpio.setup(self.state_pin_open, gpio.IN, pull_up_down=gpio.PUD_UP)
         gpio.output(self.relay_pin, True)
         self.travel_time = 15
-        self.polling = False
+        self.polling = True
         self.last_state = 5
         self.pause_poll = False
         self.restart = True
