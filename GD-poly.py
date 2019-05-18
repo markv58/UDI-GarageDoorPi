@@ -141,16 +141,16 @@ class Controller(polyinterface.Controller):
         LOGGER.debug('Checking for custom configuration parameters.')
         
         if 'short_poll' in self.polyConfig['customParams']:
-            _val = self.polyConfig['customParams']['short_poll']
+            _val = str(self.polyConfig['customParams']['short_poll'])
             _vallower = _val.lower()
             if _vallower == 'true':
                 self.polling = True
             if _vallower == 'false':
                 self.polling = False
-        LOGGER.info('The short poll is set to %s', str(self.polling))   
+        LOGGER.info('The short poll is set to %s', str(self.polling))  
         
         if 'dual_sensor' in self.polyConfig['customParams']:
-            _val = self.polyConfig['customParams']['dual_sensor']
+            _val = str(self.polyConfig['customParams']['dual_sensor'])
             _vallower = _val.lower()
             if _vallower == 'true':
                 self.dualSensor = True
@@ -162,7 +162,7 @@ class Controller(polyinterface.Controller):
             self.travel_time = self.polyConfig['customParams']['travel_time']
         LOGGER.info('The door travel time is set to %s seconds.', str(self.travel_time))
         
-        self.addCustomParam({'short_poll': self.polling, 'travel_time': self.travel_time, 'dual_sensor': self.dualSensor})
+        self.addCustomParam({'short_poll': self.polling, 'travel_time': self.travel_time, 'dual_sensor': self.dualSensor})  
     
     def remove_notices_all(self,command):
         LOGGER.info('remove_notices_all:')
