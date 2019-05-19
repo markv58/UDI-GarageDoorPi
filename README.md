@@ -2,6 +2,8 @@
 
 ## Control one or two garage door openers with a Raspberry Pi.
 
+                         ![GarageDoorNode](https://github.com/markv58/github.io/blob/master/GarageDoorPic.png)
+
 ### Installation
 
 Please take the time to backup your ISY before installation just in case.
