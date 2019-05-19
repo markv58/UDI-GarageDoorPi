@@ -56,6 +56,7 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
   
   ![Trolley](https://github.com/markv58/github.io/blob/master/Trolley.png)
   
+  
   #### Wiring
   
   ![Wiring](https://github.com/markv58/github.io/blob/master/Wiring%20pic2.png)
