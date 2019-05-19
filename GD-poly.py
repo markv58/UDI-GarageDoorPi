@@ -207,15 +207,14 @@ class Controller(polyinterface.Controller):
     # There has to be an easier way to do all these things. Well I will just have to dig into this code and finger it out!            
    
     def openDoor(self, command):
-        _door = command
         if self.d1_state == 0 or self.d2_state == 0: #closed
-            if _door == 1:
+            if command == 1:
                 self.d1_last_state = 1
                 self.setDriver('GV4', 0)
-            if _door == 2:
+            if command == 2:
                 self.d2_last_state = 1
                 self.setDriver('GV5', 0)
-            self.pollTimer(_door, 1)
+            self.pollTimer(command, 1)
             LOGGER.debug('Opening the garage door')
             
     def closeDoor(self, command):
