@@ -1,3 +1,4 @@
+
 <nodeDefs>
     <!-- NODE DEF from 5.0 document http://wiki.universal-devices.com/index.php?title=V50_MAIN -->
     <!-- controller -->
@@ -6,15 +7,21 @@
              <sts>
 	       <st id="ST" editor="bool" />
 	       <st id="GV1" editor="door_status" />
+	       <st id="GV2" editor="door_status" />
+	       <st id="GV3" editor="num_doors" />
+	       <st id="GV4" editor="door_status" />
+	       <st id="GV5" editor="door_status" />	     
 	     </sts>
         <cmds>
             <sends />
             <accepts>
-	      <cmd id="OPEN_DOOR" />
-	      <cmd id="STOP_DOOR" />
-	      <cmd id="CLOSE_DOOR" />
+	      <cmd id="OPEN_DOOR_1" />
+	      <cmd id="STOP_DOOR_1" />
+	      <cmd id="CLOSE_DOOR_1" />
+	      <cmd id="OPEN_DOOR_2" />
+	      <cmd id="STOP_DOOR_2" />
+	      <cmd id="CLOSE_DOOR_2" />       
 	      <cmd id="UPDATE_PROFILE" />
-              <cmd id="REMOVE_NOTICES_ALL" />
             </accepts>
         </cmds>
     </nodeDef>
