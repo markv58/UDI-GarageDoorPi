@@ -54,7 +54,7 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
   
   This device can be a direct replacement for the io linc device on an Insteon 74551 setup using the existing wiring and sensor. You will need to remove the device from ISY and all programs and notifications will require updating to include the Garage Door NodeServer.
   
-  ![Trolley](https://github.com/markv58/github.io/blob/master/Trolley.png)
+  ![Trolley](https://github.com/markv58/github.io/blob/master/Trolley2.png)
   
   
   #### Wiring
