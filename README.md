@@ -29,6 +29,7 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
 #### Requirements
 
 * A Raspberry Pi 3 or better with Polyglot installed.
+* Power supply.
 * A magnetic reed switch like this <a target="_blank" href="https://www.amazon.com/gp/product/B00LYCUSBY/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1">here</a>.
 * A relay switch like this <a target="_blank" href="https://www.amazon.com/SMAKN®-Active-Channel-Arduino-Raspberry/dp/B00VH8926C/ref=sr_1_5?">here</a>.
 * 18 - 26 ga. twin wire.
@@ -36,9 +37,10 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
 * A couple of strips of adhesive backed hook and loop or some stand offs to mount the Pi and relay.
 * Raspberry pi female to female pin jumper wires.
 
+
 #### Suggested mounting of the components
 
-  ![Image of the enclosure](https://github.com/markv58/github.io/blob/master/Enclosure.png)
+  ![Image of the enclosure](https://github.com/markv58/github.io/blob/master/Enclosure.png) &nspb
   
   The Pi, in the first pic, is mounted in the bottom half of a pi case and held in the enclosure with the adhesive backed hook and loop or the pi can be mounted to stand offs as in the second pic.
   
