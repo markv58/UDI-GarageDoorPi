@@ -1,13 +1,19 @@
 # controller
 ND-controller-NAME = Garage Door
 ND-controller-ICON = Output
-CMD-ctl-OPEN_DOOR-NAME = Open Door
-CMD-ctl-STOP_DOOR-NAME = Stop/Start
-CMD-ctl-CLOSE_DOOR-NAME = Close Door
+CMD-ctl-OPEN_DOOR_1-NAME = Open Door 1
+CMD-ctl-STOP_DOOR_1-NAME = Stop/Start 1
+CMD-ctl-CLOSE_DOOR_1-NAME = Close Door 1
+CMD-ctl-OPEN_DOOR_2-NAME = Open Door 2
+CMD-ctl-STOP_DOOR_2-NAME = Stop/Start 2
+CMD-ctl-CLOSE_DOOR_2-NAME = Close Door 2
 CMD-ctl-UPDATE_PROFILE-NAME = Update Profile
-CMD-ctl-REMOVE_NOTICES_ALL-NAME = Remove Notices
 ST-ctl-ST-NAME = NodeServer Online
-ST-ctl-GV1-NAME = Status
+ST-ctl-GV1-NAME = Status Door 1
+ST-ctl-GV2-NAME = Status Door 2
+ST-ctl-GV3-NAME = Number of Doors
+ST-ctl-GV4-NAME = Last Status Door 1
+ST-ctl-GV5-NAME = Last Status Door 2
 
 STATUS-0 = Closed
 STATUS-1 = Opening
@@ -15,3 +21,5 @@ STATUS-2 = Closing
 STATUS-3 = Open
 STATUS-4 = Stopped
 STATUS-5 = Unknown
+STATUS-6 = N/A
+
