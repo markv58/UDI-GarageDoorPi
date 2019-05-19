@@ -39,10 +39,9 @@ class Controller(polyinterface.Controller):
         self.polling = True
         self.dualSensor = False
         self.pause_poll = False
-        self.restart = True
+        self.restart1 = True
+        self.restart2 = True
         self.door2 = False
-        self.send_d1 = True
-        self.send_d2 = False
       
     def start(self):
         LOGGER.info('Starting Garage Door NodeServer v1.0.0')
@@ -55,7 +54,7 @@ class Controller(polyinterface.Controller):
         self.setDriver('GV4', 5)
         self.setDriver('GV5', 5)
         self.check_door2()
-        self.get_state()
+        self.first_status_check()
         
     def shortPoll(self):
         if self.polling and not self.pause_poll:
@@ -67,12 +66,23 @@ class Controller(polyinterface.Controller):
         pass
 
     def query(self):
+        LOGGER.info('self.restart1 is %s', self.restart1)
+        LOGGER.info('self.restart2 is %s', self.restart2)
+        LOGGER.info('self.d1_state is %s', self.d1_state)
+        LOGGER.info('self.d2_state is %s', self.d2_state)
         for node in self.nodes:
             self.nodes[node].reportDrivers()
 
     def discover(self, *args, **kwargs):
         pass
     
+    def first_status_check(self):
+        self.get_state()
+        if self.d1_state != 4:
+            self.restart1 = False
+        if self.d2_state != 4:
+            self.restart2 = False
+        
     def check_door2(self):
         if not self.door2:
             self.setDriver('GV2', 6)
@@ -90,6 +100,7 @@ class Controller(polyinterface.Controller):
             gpio.output(self.d2_relay_pin, True)
 
     def get_state(self):
+        #LOGGER.debug('Getting Status')
         if self.dualSensor:
             _d1valClosed = gpio.input(self.d1_state_pin_closed)
             _d1valOpen = gpio.input(self.d1_state_pin_open)
@@ -145,62 +156,54 @@ class Controller(polyinterface.Controller):
             _currentState = int(self.d2_state)
             _lastState = self.d2_last_state
             
-        if _currentState == 4 and self.restart: # This will allow a relay toggle if the nodeserver is restarted
-            self.restart = False                # while the door is in the midway position and update the status.
+        if  self.restart1 and command == 1 and _currentState == 4:    # This will allow a relay toggle if the nodeserver is restarted
+            self.restart1 = False                                     # while the door is in the midway position and update the status.
             LOGGER.info('Toggling the garage door button.')
             self.pollTimer(command, 5)
+            
+        if  self.restart2 and command == 2 and _currentState == 4:
+            self.restart2 = False
+            LOGGER.info('Toggling the garage door button.')
+            self.pollTimer(command, 5)
+        
         if _currentState == 4: # If the door is partially open.
-            #_state = self.d1_last_state
             if _lastState == 1: #opening
                 if command == 1:
                     self.d1_last_state = 2 # set to closing
                     self.setDriver('GV4', 4)
-                    self.setDriver('GV1', 2)
-                    self.d1_state = 3
                 elif command == 2:
                     self.d2_last_state = 2 # set to closing
                     self.setDriver('GV5', 4)
-                    self.setDriver('GV2', 2)
-                    self.d2_state = 3
-                self.toggle_relay(command)
+                self.pollTimer(command, 2)
             if _lastState == 2: #closing
                 if command == 1:
                     self.d1_last_state = 1 # set to opening
                     self.setDriver('GV4', 4)
-                    self.setDriver('GV1', 1)
-                    self.d1_state = 0
                 elif command == 2:
-                    self.d1_last_state = 1 # set to opening
-                    self.setDriver('GV1', 4)
-                    self.setDriver('GV5', 1)
-                    self.d1_state = 0
-                self.toggle_relay(command)   
+                    self.d2_last_state = 1 # set to opening
+                    self.setDriver('GV5', 4)
+                self.pollTimer(command, 1)   
+       
         if _currentState == 1:
             LOGGER.info('Stopping the garage door.')
-            self.toggle_relay(command)
             if command == 1:
                 self.d1_last_state = 1
                 self.setDriver('GV4', 1)
-                self.d1_state = 4
-                self.setDriver('GV1', 4)
             elif command == 2:
                 self.d2_last_state = 1
                 self.setDriver('GV5', 1)
-                self.d2_state = 4
-                self.setDriver('GV2', 4)
+            self.pollTimer(command, 4)
+        
         if _currentState == 2:
-            LOGGER.info('Stopping the garage door.')
-            self.toggle_relay(command)  
+            LOGGER.info('Stopping the garage door.')  
             if command == 1:
                 self.d1_last_state = 2
                 self.setDriver('GV4', 2)
-                self.d1_state = 4
-                self.setDriver('GV1', 4)
             elif command == 2:
                 self.d2_last_state = 2
                 self.setDriver('GV5', 2)
-                self.d2_state = 4
-                self.setDriver('GV2', 4)
+            self.pollTimer(command, 4)
+        
     # There has to be an easier way to do all these things. Well I will just have to dig into this code and finger it out!            
    
     def openDoor(self, command):
