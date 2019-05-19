@@ -14,6 +14,8 @@ class Controller(polyinterface.Controller):
     def __init__(self, polyglot):
         super(Controller, self).__init__(polyglot)
         self.name = 'Garage Door'
+        gpio.setwarnings(False)
+        gpio.cleanup()
         gpio.setmode(gpio.BCM)
         self.relay_pin = 23
         self.state_pin_closed = 27
