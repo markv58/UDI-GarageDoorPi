@@ -5,7 +5,15 @@
     </editor>
     
     <editor id="door_status">
-        <range uom="25" subset="0-5" nls="STATUS" />
+        <range uom="25" subset="0-6" nls="STATUS" />
+    </editor>
+    
+    <editor id="doors">
+        <range uom="25" subset="0-1" nls="DOORS" />
+    </editor>
+    
+    <editor id="num_doors">
+        <range uom="56" min="1" max="2" prec="0"/>
     </editor>
     
 </editors>
