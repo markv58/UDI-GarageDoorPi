@@ -65,4 +65,6 @@ Left - Single sensor with 2 chanel relay.     Right - Dual sensor with 1 chanel 
   
   ![Wiring](https://github.com/markv58/github.io/blob/master/Wiring%20pic2.png)
   
+  To see the pin assignments, Right Click on Garage Door in the admin console and select Query. The pin information will be in the log.
+  
   With the cover on, this device lives on top of the garage door opener.
