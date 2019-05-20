@@ -1,6 +1,6 @@
 {
     "name": "Garage Door",
-    "docs": "https://github.com/markv58/UDI-Garage-Door-Pi",
+    "docs": "https://github.com/markv58/UDI-GarageDoorPi",
     "type": "python3",
     "executable": "GD-poly.py",
     "install": "install.sh",
@@ -14,8 +14,8 @@
             "author": "Mark Vittes (markv58)",
             "version": "1.0.0",
             "date": "May 18, 2019",
-            "source": "https://github.com/markv58/UDI-Garage-Door-Pi",
-            "license": "https://github.com/markv58/UDI-Garage-Door-Pi/license"
+            "source": "https://github.com/markv58/UDI-GarageDoorPi",
+            "license": "https://github.com/markv58/UDI-GarageDoorPi/license"
         }
     ]
 }
