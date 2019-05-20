@@ -70,6 +70,15 @@ class Controller(polyinterface.Controller):
         LOGGER.info('self.restart2 is %s', self.restart2)
         LOGGER.info('self.d1_state is %s', self.d1_state)
         LOGGER.info('self.d2_state is %s', self.d2_state)
+        LOGGER.info('Door 1 relay is on pin %s', self.d1_relay_pin)
+        LOGGER.info('Door 1 closed is on pin %s', self.d1_state_pin_closed)
+        LOGGER.info('Door 1 open is on pin %s', self.d1_state_pin_open)
+        LOGGER.info('Door 2 relay is on pin %s', self.d2_relay_pin)
+        LOGGER.info('Door 2 closed is on pin %s', self.d2_state_pin_closed)
+        LOGGER.info('Door 2 open is on pin %s', self.d2_state_pin_open)
+        
+        
+        
         for node in self.nodes:
             self.nodes[node].reportDrivers()
 
