@@ -14,7 +14,7 @@ Install from the NodeServer Store or
 Manual installation:
 
     cd .polyglot/nodeservers
-    git clone https://github.com/markv58/UDI-Garage-Door-Pi.git
+    git clone https://github.com/markv58/UDI-GarageDoorPi.git
     cd UDI-Garage-Door-Pi
     chmod +x install.sh
     ./install.sh
