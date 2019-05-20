@@ -42,10 +42,10 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
 
 #### Suggested mounting of the components
 
-Left - Single sensor with 2 chanel relay.     Right - Dual sensor with 1 chanel relay.
-
   ![Image of the enclosure](https://github.com/markv58/github.io/blob/master/First_enclosure.png)  ![Image of the second enclosure](https://github.com/markv58/github.io/blob/master/Enclosure2pic.png)
   
+Left - Single sensor with 2 chanel relay.     Right - Dual sensor with 1 chanel relay.
+
   The Pi, in the first pic, is mounted in the bottom half of a pi case and held in the enclosure with the adhesive backed hook and loop or the pi can be mounted to stand offs as in the second pic.
   
   Two small screws secure the relay into two mounts and I super glued a small platic stud to the enclosure to support the other side of the relay board. You can use stand offs as well.
