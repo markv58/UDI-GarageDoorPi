@@ -1,5 +1,5 @@
 {
-    "name": "Garage Door",
+    "name": "GarageDoorRPi",
     "docs": "https://github.com/markv58/UDI-GarageDoorPi",
     "type": "python3",
     "executable": "GD-poly.py",
