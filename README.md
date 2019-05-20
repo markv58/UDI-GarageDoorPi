@@ -42,7 +42,7 @@ You can use either a single or dual sensor setup. The dual sensor setup will be 
 
 #### Suggested mounting of the components
 
-  ![Image of the enclosure](https://github.com/markv58/github.io/blob/master/First_enclosure.png) &nbsp ![Image of the second enclosure]
+  ![Image of the enclosure](https://github.com/markv58/github.io/blob/master/First_enclosure.png) &nbsp ![Image of the second enclosure](https://github.com/markv58/github.io/blob/master/Enclosure2pic.png)
   
   The Pi, in the first pic, is mounted in the bottom half of a pi case and held in the enclosure with the adhesive backed hook and loop or the pi can be mounted to stand offs as in the second pic.
   
