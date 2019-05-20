@@ -54,7 +54,11 @@ class Controller(polyinterface.Controller):
         self.setDriver('GV4', 5)
         self.setDriver('GV5', 5)
         self.check_door2()
+        time.sleep(1)
         self.first_status_check()
+        time.sleep(1)
+        self.query()
+        LOGGER.info('Garage Door is ready')
         
     def shortPoll(self):
         if self.polling and not self.pause_poll:
@@ -76,9 +80,6 @@ class Controller(polyinterface.Controller):
         LOGGER.info('Door 2 relay is on pin %s', self.d2_relay_pin)
         LOGGER.info('Door 2 closed is on pin %s', self.d2_state_pin_closed)
         LOGGER.info('Door 2 open is on pin %s', self.d2_state_pin_open)
-        
-        
-        
         for node in self.nodes:
             self.nodes[node].reportDrivers()
 
