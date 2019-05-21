@@ -56,14 +56,13 @@ Left - Single sensor with 2 chanel relay.     Right - Dual sensor with 1 chanel 
   
   The wire to the reed switch was run along the top of the rail under the existing wire clips. With the door closed the switch was fastened to the rail with the adhesive strip and the magnet was fixed to the trolley. Your setup may vary. For the dual sensor setup the door is then raised and the second reed switch is set in place.
   
-  This device can be a direct replacement for the io linc device on an Insteon 74551 setup using the existing wiring and sensor. You will need to remove the device from ISY and all programs and notifications will require updating to include the Garage Door NodeServer.
   
   ![Trolley](https://github.com/markv58/github.io/blob/master/Trolley2.png)
   
   
   #### Wiring
   
-  ![Wiring](https://github.com/markv58/github.io/blob/master/Wiring%20pic2.png)
+  ![Wiring](https://github.com/markv58/github.io/blob/master/WiringPic.png)
   
   To see the pin assignments, Right Click on Garage Door in the admin console and select Query. The pin information will be in the log.
   
