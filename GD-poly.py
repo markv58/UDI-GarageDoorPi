@@ -60,7 +60,9 @@ class Controller(polyinterface.Controller):
         time.sleep(1)
         self.query()
         time.sleep(1)
+        LOGGER.info('Getting CPU temp')
         self.get_temp()
+        LOGGER.info('If updated from 1.0.0, hit the Update Proflie button and restart the AC')
         LOGGER.info('Garage Door is ready')
         
     def shortPoll(self):
