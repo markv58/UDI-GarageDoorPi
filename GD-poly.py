@@ -7,6 +7,7 @@ import sys
 import time
 import RPi.GPIO as gpio
 import threading
+import io
 
 LOGGER = polyinterface.LOGGER
 
@@ -44,7 +45,7 @@ class Controller(polyinterface.Controller):
         self.door2 = False
       
     def start(self):
-        LOGGER.info('Starting Garage Door NodeServer v1.0.0')
+        LOGGER.info('Starting Garage Door NodeServer v1.0.1')
         self.removeNoticesAll()
         self.check_params()
         self.setDriver('ST', 1)
@@ -58,6 +59,8 @@ class Controller(polyinterface.Controller):
         self.first_status_check()
         time.sleep(1)
         self.query()
+        time.sleep(1)
+        self.get_temp()
         LOGGER.info('Garage Door is ready')
         
     def shortPoll(self):
@@ -67,7 +70,7 @@ class Controller(polyinterface.Controller):
             pass
     
     def longPoll(self):
-        pass
+        self.get_temp()
 
     def query(self):
         LOGGER.info('self.restart1 is %s', self.restart1)
@@ -83,6 +86,12 @@ class Controller(polyinterface.Controller):
         for node in self.nodes:
             self.nodes[node].reportDrivers()
 
+    def get_temp(self):
+        with open("/sys/class/thermal/thermal_zone0/temp", "r") as f:
+            t = int(f.readline ())
+        _temp = (t / 1000)
+        self.setDriver('GV6', _temp)
+        
     def discover(self, *args, **kwargs):
         pass
     
@@ -336,7 +345,8 @@ class Controller(polyinterface.Controller):
                {'driver': 'GV2', 'value': 0, 'uom': 25},
                {'driver': 'GV3', 'value': 0, 'uom': 56},
                {'driver': 'GV4', 'value': 0, 'uom': 25},
-               {'driver': 'GV5', 'value': 0, 'uom': 25}
+               {'driver': 'GV5', 'value': 0, 'uom': 25},
+               {'driver': 'GV6', 'value': 0, 'uom': 4}
               ]
 
     id = 'controller'
