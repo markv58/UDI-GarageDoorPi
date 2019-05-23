@@ -16,4 +16,8 @@
         <range uom="56" min="1" max="2" prec="0"/>
     </editor>
     
+    <editor id="pi_temp_c">
+        <range uom="4" min="-50" max="100" step="1" prec="0"/>
+    </editor>
+    
 </editors>
