@@ -14,6 +14,7 @@ ST-ctl-GV2-NAME = Status Door 2
 ST-ctl-GV3-NAME = Number of Doors
 ST-ctl-GV4-NAME = Last Status Door 1
 ST-ctl-GV5-NAME = Last Status Door 2
+ST-ctl-GV6-NAME = RPi Temp C
 
 STATUS-0 = Closed
 STATUS-1 = Opening
