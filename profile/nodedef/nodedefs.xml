@@ -1,4 +1,3 @@
-
 <nodeDefs>
     <!-- NODE DEF from 5.0 document http://wiki.universal-devices.com/index.php?title=V50_MAIN -->
     <!-- controller -->
@@ -10,7 +9,8 @@
 	       <st id="GV2" editor="door_status" />
 	       <st id="GV3" editor="num_doors" />
 	       <st id="GV4" editor="door_status" />
-	       <st id="GV5" editor="door_status" />	     
+	       <st id="GV5" editor="door_status" />
+	       <st id="GV6" editor="pi_temp_c" />
 	     </sts>
         <cmds>
             <sends />
