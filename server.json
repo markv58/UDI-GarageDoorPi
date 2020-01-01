@@ -4,7 +4,7 @@
     "type": "python3",
     "executable": "GD-poly.py",
     "install": "install.sh",
-    "description": "Garage Door Controller NodeServer",
+    "description": "Garage Door Controller NodeServer for Raspberry Pi",
     "notice": "Use at your own risk",
     "shortPoll": "10",
     "longPoll": "240",
