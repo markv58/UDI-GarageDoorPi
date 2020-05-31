@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#Garage Door Opener Controller
+#Garage Door Opener Controller v1.0.2
 
 import polyinterface
 import sys
@@ -8,8 +8,10 @@ import time
 import RPi.GPIO as gpio
 import threading
 import io
+import logging
 
 LOGGER = polyinterface.LOGGER
+logging.getLogger('urllib3').setLevel(logging.ERROR)
 
 class Controller(polyinterface.Controller):
     def __init__(self, polyglot):
