@@ -69,3 +69,5 @@ Left - Single sensor with 2 chanel relay.     Right - Dual sensor with 1 chanel 
   With the cover on, this device lives on top of the garage door opener.
 
 v1.0.1 Added cpu temp on the long poll.
+
+v1.0.2 Set logging level to error for poly latest interface
